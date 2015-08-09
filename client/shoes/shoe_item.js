@@ -30,12 +30,12 @@ Template.shoeItem.helpers({
 	}
 });
 
-Template.shoeItem.events({
-	'click .request': function(e){
-		e.preventDefault();
+// Template.shoeItem.events({
+// 	'click .request': function(e){
+// 		e.preventDefault();
 
-		var currentShoeId = this;
+// 		var currentShoeId = this;
 
-		Router.go('shoeRequest', this);
-	}
-});
+// 		Router.go('shoeRequest', this);
+// 	}
+// });
