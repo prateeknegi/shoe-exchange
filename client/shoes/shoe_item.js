@@ -1,4 +1,4 @@
-Template.shoeItem.helpers({
+var shoeItemHelper = {
 	submittedText : function(){
 		return this.submitted.toString();
 	}, 
@@ -28,7 +28,10 @@ Template.shoeItem.helpers({
 		
 		return 'panel-grey';
 	}
-});
+};
+
+Template.shoeItem.helpers(shoeItemHelper);
+Template.requestShoeItem.helpers(shoeItemHelper);
 
 // Template.shoeItem.events({
 // 	'click .request': function(e){
