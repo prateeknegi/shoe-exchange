@@ -1,0 +1,27 @@
+<template name="manageShoe">
+	<div class="panel panel-grey">
+		<div class="panel-heading">
+			<div class="h3">{{type}} size {{size}}</div>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				{{barTypeText}} Bar
+			</li>
+			<li class="list-group-item">
+				<i class="{{stiltsIcon}}"></i> Stilts
+			</li>
+			<li class="list-group-item">
+				Submitted on {{submittedText}}
+			</li>
+		</ul>
+	</div>
+	<div class="panel panel-grey">
+      	{{#each requests}}
+      		<ul class="list-group list-group-flush">
+      			<li class="list-group-item">
+        			{{> requestItem}}
+        		</li>
+        	</ul>
+      	{{/each}}
+	</div>
+</template>

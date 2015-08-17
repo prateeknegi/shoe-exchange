@@ -1,3 +1,6 @@
+Template.shoeRequest.helpers({
+	
+});
 Template.shoeRequest.events({
 	'submit form': function(e){
 		e.preventDefault();
@@ -7,7 +10,7 @@ Template.shoeRequest.events({
 			addressLine1: $(e.target).find('[name=addressLine1]').val(),
 			addressLine2: '',
 			city: $(e.target).find('[name=city]').val(),
-			state: $(e.target).find('[name=state]').val(),
+			postalState: $(e.target).find('[name=postalState]').val(),
 			country: 'USA',
 			zipcode: $(e.target).find('[name=zipcode]').val()
 		};

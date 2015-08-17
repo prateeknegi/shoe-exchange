@@ -22,10 +22,13 @@
 		</ul>
 		<div class="panel-footer">
 			{{#if ownDonation}}
-				<button class="btn btn-danger">Delete</button>
+			    <a href="{{pathFor 'manageShoe'}}" class="btn btn-primary">Manage Your Donation</a>
 			{{else}}
-			 <a href="{{pathFor 'shoeRequest'}}" class="btn btn-primary">Request</a>
-				
+				{{#if isAlreadyRequestedByUser}}
+			  		<button class="btn btn-success">Edit Request</button>
+			  	{{else}}
+			  		<a href="{{pathFor 'shoeRequest'}}" class="btn btn-primary">Request</a>	
+			  	{{/if}}
 			{{/if}}	
 		</div>
 	</div>
