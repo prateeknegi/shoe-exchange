@@ -19,3 +19,15 @@ Template.manageShoe.helpers({
 		return this.barType;
 	}
 });
+
+Template.manageShoe.events({
+	'click .delete' :  function(e){
+		e.preventDefault();
+
+		if(confirm("Are you sure you want to delete donation?")){
+			var currentShoeId = this._id;
+			Shoes.remove(currentShoeId);
+			Router.go('shoeList');
+		}
+	}
+});
