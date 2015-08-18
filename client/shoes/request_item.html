@@ -1,8 +1,29 @@
 <template name="requestItem">
-   <p>
-     <span class="requestedBy">User <strong>{{requestedBy}}</strong> requested </span>
-     <span class="city">from {{city}}, {{postalState}}</span>
-     <span class="submitted">on {{formatDate submitted}}</span>
-	</p>
-   <p>Message: {{message}}</p>
+
+	<li class="list-group-item">
+        <p>
+     		<span class="requestedBy">User <strong>{{requestedBy}}</strong> requested </span>
+     		<span class="city">from {{city}}, {{postalState}}</span>
+     		<span class="submitted">on {{formatDate submitted}}</span>
+		</p>
+	    <p>Message: {{message}}</p>
+    </li>
+
+    {{#if requestAccepted}}
+	    <li class="list-group-item">
+	     	{{> requestAddress}}
+	    </li>
+	    {{#unless donationClosed}}
+		    <li class="list-group-item">
+				<button class="btn btn-success cancelAcceptRequest">Cancel Accepted</button>
+			</li>
+		{{/unless}}
+	{{else}}
+	  {{#if donationActive}}
+		<li class="list-group-item">
+			<button class="btn btn-success acceptRequest">Accept</button>
+		</li>
+	  {{/if}}
+	{{/if}}
+  
 </template>

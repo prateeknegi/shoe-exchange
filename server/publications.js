@@ -1,5 +1,5 @@
 Meteor.publish('shoes', function(){
-	return Shoes.find({state : {$ne: 'COMPLETED'}});
+	return Shoes.find({state : {$ne: 'CLOSED'}});
 });
 
 Meteor.publish('shoe', function(shoeId){

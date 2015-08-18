@@ -14,17 +14,46 @@ Template.manageShoe.helpers({
 			return 'No';
 		}
 		return this.barType;
+	},
+	stateClass: function(){
+		if(this.state === 'POSTED'){
+			return 'panel-green';
+		}
+		if(this.state === 'PENDING'){
+			return 'panel-blue';
+		}
+		
+		return 'panel-grey';
+	}, 
+	isPending: function(){
+		return this.state == 'PENDING';
+	}, 
+	isClosed: function(){
+		return this.state == 'CLOSED';
 	}
 });
 
 Template.manageShoe.events({
-	'click .delete' :  function(e){
+	'click .deleteDonation' :  function(e){
 		e.preventDefault();
 
 		if(confirm("Are you sure you want to delete donation?")){
 			var currentShoeId = this._id;
 			Shoes.remove(currentShoeId);
 			Router.go('shoeList');
+		}
+	},
+	'click .closeDonation' :  function(e){
+		e.preventDefault();
+
+		if(confirm("Are you sure you want to close donation? Have you mailed the shoes to the address provided below ?")){
+			var currentShoeId = this._id;
+			Meteor.call('closeDonation', currentShoeId, function(error, result){
+				if(error){
+					return Errors.throw(error.reason);
+				}
+				Router.go('shoeList');
+			});
 		}
 	}
 });
