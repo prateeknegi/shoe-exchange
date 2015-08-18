@@ -1,8 +1,8 @@
 <template name="requestItem">
    <p>
-     <span class="requestedBy">Requested by {{requestedBy}}</span>
+     <span class="requestedBy">User <strong>{{requestedBy}}</strong> requested </span>
      <span class="city">from {{city}}, {{postalState}}</span>
-     <span class="submitted">{{submitted}}</span>
+     <span class="submitted">on {{formatDate submitted}}</span>
 	</p>
    <p>Message: {{message}}</p>
 </template>

@@ -1,7 +1,4 @@
 var shoeItemHelper = {
-	submittedText : function(){
-		return this.submitted.toString();
-	}, 
 	stiltsIcon: function(){
 		if(this.stilts){
 			return 'glyphicon glyphicon-ok text-success';
