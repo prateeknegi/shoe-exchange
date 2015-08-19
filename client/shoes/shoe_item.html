@@ -25,7 +25,7 @@
 			    <a href="{{pathFor 'manageShoe'}}" class="btn btn-primary">Manage Your Donation</a>
 			{{else}}
 				{{#if isAlreadyRequestedByUser}}
-			  		<button class="btn btn-success">Edit Request</button>
+					<a href="{{pathFor 'editRequest'}}" class="btn btn-success">Edit Request</a>	
 			  	{{else}}
 			  		<a href="{{pathFor 'shoeRequest'}}" class="btn btn-primary">Request</a>	
 			  	{{/if}}
