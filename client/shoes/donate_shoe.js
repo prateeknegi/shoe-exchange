@@ -4,8 +4,9 @@ Template.donateShoe.events({
 		var shoeDonation = {
 			type: $(e.target).find('[name=type]').val(), 
 			size: $(e.target).find('[name=size]').val(), 
-			barType: $(e.target).find('[name=barType]').val(), 
-			stilts: $(e.target).find('[name=stilts]').prop('checked')
+			toeStilts: $(e.target).find('[name=toeStilts]').prop('checked'),
+			pfs: $(e.target).find('[name=pfs]').prop('checked'),
+			barType: $(e.target).find('[name=barType]').val() 
 		}
 
 		Meteor.call('addShoeToDonation', shoeDonation , function(error, results){

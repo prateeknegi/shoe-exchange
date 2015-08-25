@@ -1,5 +1,5 @@
 <template name="shoeItem">
-	<div class="panel {{stateClass}}">
+	<div class="panel {{shoeDonationStatePanel state}}">
 		<div class="panel-heading">
 			<h3>{{type}}</h3>
 		</div>
@@ -8,17 +8,20 @@
 		</div>
 		<ul class="list-group list-group-flush">
 			<li class="list-group-item">
-			{{barTypeText}} Bar
-		</li>
-		<li class="list-group-item">
-			<i class="{{stiltsIcon}}"></i> Stilts
-		</li>
-		<li class="list-group-item">
-			Donated by {{owner}}
-		</li>
-		<li class="list-group-item">
-			Submitted on {{formatDate submitted}}
-		</li>
+				<i class="{{checkedGlyph toeStilts}}"></i> Toe Stilts
+			</li>
+			<li class="list-group-item">
+				<i class="{{checkedGlyph pfs}}"></i> Plantar Flexion
+			</li>
+			<li class="list-group-item">
+				{{barTypeText barType}}
+			</li>
+			<li class="list-group-item">
+				Donated by {{owner}}
+			</li>
+			<li class="list-group-item">
+				Submitted on {{formatDate submitted}}
+			</li>
 		</ul>
 		<div class="panel-footer">
 			{{#if ownDonation}}

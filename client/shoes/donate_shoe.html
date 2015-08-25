@@ -12,49 +12,45 @@
  		<label for="type" class="col-sm-2 control-label">Shoe Type </label>
  		<div class="col-sm-4">
 	 		<select name="type" class="form-control">
-			  <option>Type A</option>
-			  <option>Type B</option>
+			  <option value="Ponseti AFO">Ponseti AFO</option>
 			</select>
 		</div>
  	</div>
  	<div class="form-group">
 	 	<label for="size" class="col-sm-2 control-label">Size</label>
 	 	<div class="col-sm-4">
-	 		<select name="size" class="form-control">
-			  <option>000</option>
-			  <option>00</option>
-			  <option>0</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
-			  <option>6</option>
-			  <option>7</option>
-			  <option>8</option>
-			  <option>9</option>
-			  <option>10</option>
-			</select>
-		</div>
- 	</div>
- 	<div class="form-group">
-	 	<label for="barType" class="col-sm-2 control-label">Bar Type</label>
-	 	<div class="col-sm-4">
-	 		<select name="barType" class="form-control">
-			  <option>None</option>
-			  <option>Ponsetti</option>
-			  <option>Dobbs</option>
-			</select>
+	 		<input name="size" class="form-control" placeholder="Shoe Size" type="text" required="true"/>
 		</div>
  	</div>
  	<div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-4">
 	      <div class="checkbox">
-	        <label for="stilts">
-	          <input name="stilts" value="true" type="checkbox"> With Stilts
+	        <label for="toeStilts">
+	          <input name="toeStilts" value="true" type="checkbox"> with Toe Stilts
 	        </label>
 	      </div>
 	    </div>
   	</div>
+  	<div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-4">
+	      <div class="checkbox">
+	        <label for="pfs">
+	          <input name="pfs" value="true" type="checkbox"> with Plantar Flexion
+	        </label>
+	      </div>
+	    </div>
+  	</div>
+ 	<div class="form-group">
+	 	<label for="barType" class="col-sm-2 control-label">Bar Type</label>
+	 	<div class="col-sm-4">
+	 		<select name="barType" class="form-control">
+			  <option value="none">None</option>
+			  <option value="ponseti">Ponseti Abduction Rotation Bars</option>
+			  <option value="dobbs">Mitchell Spring Assisted Dobbs Brace</option>
+			</select>
+		</div>
+ 	</div>
+ 	
   	<div class="col-sm-offset-2 col-sm-4">
    		<input type="submit" value="Donate" class="btn btn-primary"/>
 	</div>
